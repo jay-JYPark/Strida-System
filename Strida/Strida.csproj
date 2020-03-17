@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA7B4E62-5809-4ACE-85E0-F09B9C527C43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Strida</RootNamespace>
+    <AssemblyName>Strida</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdengFx, Version=1.1.8.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDlls\AdengFx.dll</HintPath>
+    </Reference>
+    <Reference Include="olprt, Version=1.0.2.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDlls\olprt.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeatherAbout">
+      <HintPath>..\RefDlls\WeatherAbout.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceMapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StridaMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StridaMain.Designer.cs">
+      <DependentUpon>StridaMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StridaOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="DeviceAddForm.resx">
+      <DependentUpon>DeviceAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceMapForm.resx">
+      <DependentUpon>DeviceMapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceMngForm.resx">
+      <DependentUpon>DeviceMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StridaMain.resx">
+      <DependentUpon>StridaMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StridaOptionForm.resx">
+      <DependentUpon>StridaOptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StridaBiz\StridaBiz.csproj">
+      <Project>{4E2533FB-B8D3-495A-A1FF-3AFEED345F57}</Project>
+      <Name>StridaBiz</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기정보관리_수정_41_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기정보관리_등록_41_40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_dialogue_control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_bar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_dialogue_Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\우량기정보관리_24_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_dialogue_control_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DMB_reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow2_right_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow2_left_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconPopInfo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
